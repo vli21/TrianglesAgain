@@ -24,6 +24,8 @@ public class Tester{
     System.out.println (abc.getArea());
     System.out.println (abc.classify());
     System.out.println (abc.toString());
+    abc.setVertex(2, p);
+    System.out.println ( abc.toString());
 
   }
 }
