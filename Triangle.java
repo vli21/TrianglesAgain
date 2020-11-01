@@ -61,7 +61,7 @@ public class Triangle {
             );
   }
   /*---------------------------------------------------------------
-  Classify Triangles based on "equilateral" "isosceles" or "scalene".
+  setVertex changes the vertex of the Triangles as it's supposed to.
   -----------------------------------------------------------------*/
   public void setVertex(int index, Point newP) {
     if (index== 0) {
