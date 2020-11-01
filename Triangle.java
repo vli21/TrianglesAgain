@@ -1,4 +1,4 @@
-public class Triangle{
+public class Triangle {
   private Point v1, v2, v3;
 
   /*------------------------------
@@ -20,7 +20,7 @@ public class Triangle{
   /*------------------------------
   Finds The Perimeter of triangle.
   --------------------------------*/
-  public double getPerimeter(){
+  public double getPerimeter() {
     double x = v1.distanceTo(v2);
     double y = v2.distanceTo(v3);
     double z = v3.distanceTo(v1);
@@ -39,7 +39,7 @@ public class Triangle{
   /*---------------------------------------------------------------
   Classify Triangles based on "equilateral" "isosceles" or "scalene".
   -----------------------------------------------------------------*/
-  public String classify(){
+  public String classify() {
     double x = Math.round(v1.distanceTo (v2)/10000)*10000;
     double y = Math.round(v2.distanceTo (v3)/10000)*10000;
     double z = Math.round(v3.distanceTo (v1)/10000)*10000;
@@ -51,11 +51,27 @@ public class Triangle{
     }
     return ("scalene");
   }
-
-  public String toString(){
+  /*-------------------------------------------
+  Returns the points of a Triangle as a String.
+  ---------------------------------------------*/
+  public String toString() {
     return ("v1"+ "("+ v1.getX()+ ", "+ v1.getY()+") "+
             "v2"+ "("+ v2.getX()+ ", "+ v2.getY()+") "+
-            "v3"+ "("+ v3.getX()+ ", "+ v3.getY()+") " 
+            "v3"+ "("+ v3.getX()+ ", "+ v3.getY()+") "
             );
+  }
+  /*---------------------------------------------------------------
+  Classify Triangles based on "equilateral" "isosceles" or "scalene".
+  -----------------------------------------------------------------*/
+  public void setVertex(int index, Point newP) {
+    if (index== 0) {
+      v1 = newP;
+    }
+    if (index== 1) {
+      v2 = newP;
+    }
+    else {
+      v3 = newP;
+    }
   }
 }
