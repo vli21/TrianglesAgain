@@ -5,10 +5,10 @@ public class Tester{
     Point b = new Point (5,3);
     Point c = new Point (3,7);
     Triangle abc = new Triangle (a,b,c);
-    
+
     /*------------------------------------
     checks to see if get X and get Y work
-    ------------------------------------*/
+    -------------------------------------*/
     System.out.println (a.getX());
     System.out.println (a.getY());
 
@@ -16,9 +16,14 @@ public class Tester{
 
     System.out.println (a.equals(b));
     System.out.println (a.equals(p));
-    System.out.println (abc.getPerimeter());
 
+    /*---------------------------------------------------------------
+    checking the constructors accessors and mutators in Triangle.java
+    -----------------------------------------------------------------*/
+    System.out.println (abc.getPerimeter());
     System.out.println (abc.getArea());
+    System.out.println (abc.classify());
+    System.out.println (abc.toString());
 
   }
 }
